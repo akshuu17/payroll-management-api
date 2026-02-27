@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PayrollManagementAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+892fb2bebb54e8b78aaf50686cf755f4db4624ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9dd554a947b88eed69c4d05761730580d34f2b8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PayrollManagementAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PayrollManagementAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
