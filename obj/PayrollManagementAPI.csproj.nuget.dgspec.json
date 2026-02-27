@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {}
+    "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {}
   },
   "projects": {
-    "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {
+    "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
+        "projectUniqueName": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
         "projectName": "PayrollManagementAPI",
-        "projectPath": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
+        "projectPath": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
         "packagesPath": "C:\\Users\\AKSHUU\\.nuget\\packages\\",
-        "outputPath": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\obj\\",
+        "outputPath": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,6 +65,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
