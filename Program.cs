@@ -6,9 +6,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 // ?? Database Connection
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
+<<<<<<< HEAD
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
+=======
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
 // ?? Controllers
 builder.Services.AddControllers();

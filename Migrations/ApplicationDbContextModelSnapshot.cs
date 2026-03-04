@@ -2,8 +2,13 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+<<<<<<< HEAD
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+=======
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 using PayrollManagementAPI.Data;
 
 #nullable disable
@@ -17,22 +22,36 @@ namespace PayrollManagementAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+<<<<<<< HEAD
                 .HasAnnotation("ProductVersion", "8.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+=======
+                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("Relational:MaxIdentifierLength", 63);
+
+            NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
             modelBuilder.Entity("PayrollManagementAPI.Models.Employee", b =>
                 {
                     b.Property<int>("EPFNo")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("EPFNo"));
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("EPFNo"));
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasMaxLength(200)
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("BasicSalary")
@@ -42,19 +61,39 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("character varying(200)");
+
+                    b.Property<int>("BasicSalary")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(20000);
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.Property<string>("Position")
                         .IsRequired()
                         .HasMaxLength(50)
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("ProfileImage")
@@ -68,6 +107,21 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<int>("WorkingDays")
                         .HasColumnType("int");
+=======
+                        .HasColumnType("character varying(50)");
+
+                    b.Property<string>("ProfileImage")
+                        .HasColumnType("text");
+
+                    b.Property<int>("SalaryAdvance")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TravellingAllowance")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("WorkingDays")
+                        .HasColumnType("integer");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("EPFNo");
 
@@ -78,6 +132,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -98,6 +153,28 @@ namespace PayrollManagementAPI.Migrations
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("EventDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -108,6 +185,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -120,6 +198,20 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<DateTime>("RegisteredDate")
                         .HasColumnType("datetime2");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EPFNo")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("RegisteredDate")
+                        .HasColumnType("timestamp with time zone");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -133,6 +225,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -153,6 +246,28 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<DateTime>("ToDate")
                         .HasColumnType("datetime2");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EPFNo")
+                        .HasColumnType("integer");
+
+                    b.Property<DateTime>("FromDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Reason")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("ToDate")
+                        .HasColumnType("timestamp with time zone");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -163,6 +278,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -183,6 +299,28 @@ namespace PayrollManagementAPI.Migrations
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("EPFNo")
+                        .HasColumnType("integer");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -193,6 +331,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -229,6 +368,44 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<double>("TravellingAllowance")
                         .HasColumnType("float");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<double>("BasicSalary")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Designation")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("EPFNo")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("EmployeeName")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("NetSalary")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("PF")
+                        .HasColumnType("double precision");
+
+                    b.Property<DateTime>("PayDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("PayPeriod")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<double>("Tax")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("TravellingAllowance")
+                        .HasColumnType("double precision");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -239,6 +416,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -266,6 +444,35 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<int>("Technician")
                         .HasColumnType("int");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Analyst")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("AssistantManager")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Manager")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SeniorManager")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("SeniorSpecialist")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Specialist")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("TeamLeader")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Technician")
+                        .HasColumnType("integer");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 
@@ -276,6 +483,7 @@ namespace PayrollManagementAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
+<<<<<<< HEAD
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -288,22 +496,50 @@ namespace PayrollManagementAPI.Migrations
 
                     b.Property<DateTime?>("OtpExpiry")
                         .HasColumnType("datetime2");
+=======
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("EPFNo")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("OtpExpiry")
+                        .HasColumnType("timestamp with time zone");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.Property<string>("Password")
                         .IsRequired()
                         .HasMaxLength(100)
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ResetOtp")
                         .HasColumnType("nvarchar(max)");
+=======
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<string>("ResetOtp")
+                        .HasColumnType("text");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasMaxLength(20)
+<<<<<<< HEAD
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<int?>("UserId")
                         .HasColumnType("int");
+=======
+                        .HasColumnType("character varying(20)");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("integer");
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
 
                     b.HasKey("Id");
 

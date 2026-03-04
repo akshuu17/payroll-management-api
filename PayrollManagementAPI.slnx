@@ -1,3 +1,9 @@
 <Solution>
+<<<<<<< HEAD
+=======
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+>>>>>>> caa3ae63c8b495dafd058aa1e1c811ddc0e4ef26
   <Project Path="PayrollManagementAPI.csproj" />
 </Solution>
