@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {}
+    "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {
+    "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
+        "projectUniqueName": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
         "projectName": "PayrollManagementAPI",
-        "projectPath": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
+        "projectPath": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\PayrollManagementAPI.csproj",
         "packagesPath": "C:\\Users\\AKSHUU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AKSHUU\\Desktop\\PayrollManagementAPI\\obj\\",
+        "outputPath": "D:\\Employee Payroll Management System\\Employee Payroll Management System Backend\\PayrollManagementAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,33 +50,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.4, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.6.2, )"
-            },
-            "itext7": {
-              "target": "Package",
-              "version": "[9.5.0, )"
+              "version": "[8.0.0, )"
             }
           },
           "imports": [
